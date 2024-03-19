@@ -5,7 +5,7 @@ Abstraction is the process of removing elements from a program that distract fro
 This project uses abstraction to help the user focus on the important features of the program. One strong example of
 absctraction is the use of the "saveStorageData" and "loadStorageData" functions. These functions are used to save and
 load previous inputed data from the user. This allows the user to focus on the important features of the program,
-instead of having to inputing the same data every time the program is run. Furthemore, instead of having a "save" option
+instead of having to inputing the same data every time the program is run. Furthermore, instead of having a "save" option
 that the user has to select, the program automatically saves the data when the user exits the program.
 
 ________________________________________________________________________________________________________________________

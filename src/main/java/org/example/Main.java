@@ -8,28 +8,24 @@ import java.io.PrintWriter;
 
 public class Main {
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner sScanner = new Scanner(System.in);
     private static Storage cStorage;
     private static List<Storage> storageList = new ArrayList<>();
 
     public static void main(String[] args) {
-
         createStorage();
         System.out.println("Welcome to the storage system\n");
         selectOptions();
     }
 
     public static void selectOptions() {
-
         cStorage = selectStorage(disStorageMenu());
         assert cStorage != null;
         selectAction(disActionMenu());
-
     }
 
     public static void createStorage() {
         ArrayList<ArrayList<String>> savedData = loadStorageData();
-
 
         Storage sLocker = new Storage();
         sLocker.setName("Locker");
@@ -80,7 +76,7 @@ public class Main {
                 "4. Exit\n");
 
         System.out.print("Enter your storage choice: ");
-        return scanner.nextInt();
+        return sScanner.nextInt();
     }
 
 
@@ -109,7 +105,7 @@ public class Main {
                         "6. Get %1$s Weight details\n", cStorage.getName()));
 
         System.out.print("Enter your action choice: ");
-        return scanner.nextInt();
+        return sScanner.nextInt();
     }
 
     public static void selectAction(int aChoice) {
@@ -133,10 +129,10 @@ public class Main {
         System.out.println("You have chosen to add an item\n");
         System.out.print("Enter the name of the item: ");
 
-        String name = scanner.next();
+        String name = sScanner.next();
         System.out.print("Enter the weight of the item (kg): ");
 
-        int weight = scanner.nextInt();
+        int weight = sScanner.nextInt();
         Items item = new Items();
         item.setName(name);
         item.setWeight(weight);
@@ -148,7 +144,7 @@ public class Main {
     public static void removeItem() {
         System.out.println("You have chosen to remove an item");
         System.out.print("Enter the name of the item: ");
-        String name = scanner.next();
+        String name = sScanner.next();
 
         for (Items item : cStorage.getItems()) {
             if (item.getName().equals(name)) {
@@ -180,7 +176,7 @@ public class Main {
         Storage tempStorage = selectStorage(sChoice);
 
         System.out.print("Enter the name of the item: ");
-        String name = scanner.next();
+        String name = sScanner.next();
 
         for (Items item : cStorage.getItems()) {
             if (item.getName().equals(name)) {

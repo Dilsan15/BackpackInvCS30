@@ -2,7 +2,7 @@ package org.example;
 
 public class Items {
     private String iName;
-    private int weight;
+    private int iWeight;
 
     public String getName() {
         return this.iName;
@@ -13,11 +13,11 @@ public class Items {
     }
 
     public int getWeight() {
-        return this.weight;
+        return this.iWeight;
     }
 
     public void setWeight(int weight) {
-        this.weight = weight;
+        this.iWeight = weight;
     }
 
 }

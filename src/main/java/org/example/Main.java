@@ -47,7 +47,6 @@ public class Main {
         storageList.add(sPencilCase);
         storageList.add(sBackpack);
 
-        System.out.println(storageList);
 
         if (savedData == null) {
             System.out.println("No saved data found!\n");
@@ -65,7 +64,6 @@ public class Main {
 
                     item.setWeight(Integer.parseInt(line.get(i + 1)));
                     storageList.get(savedData.indexOf(line)).addItem(item);
-                    System.out.println(storageList.get(savedData.indexOf(line)).getName());
 
                 }
             }

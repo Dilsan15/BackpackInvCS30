@@ -54,7 +54,7 @@ public class Storage {
         return this.storageItems;
     }
 
-    public int getWeight(){
+    public int getWeight() {
         for (Items item : storageItems) {
             this.tWeight += item.getWeight();
         }

@@ -19,6 +19,6 @@ ________________________________________________________________________________
 
 Encapsulation is the process of hiding the internal workings of an object from outside programs.
 
-This project does this through the use of private variables and functions, and it organizing program functionality into
-multiple separate classes
+This project does this through the use of private variables/functions, and it being organized into multiple separate
+classes and files
 
